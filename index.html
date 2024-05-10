@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <title>Hunting phone api</title>
+</head>
+<body class="container mx-auto">
+    <header>
+         <h2 class="text-5xl font-bold text-center mb-5">Hunting phone</h2>
+    </header>
+    <main class="w-full">
+        
+        <section class="flex justify-center py-5 bg-gray-100 ">
+            <input id="search-field" type="text" placeholder="search" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch()" class="bg-blue-300 p-2 rounded text-white ml-5">
+                search
+            </button>
+        </section>
+        <div id="loading-spinner" class="text-center hidden">
+            <span class="loading loading-dots loading-lg"></span>
+        </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-44 gap-10 py-5">
+                
+            </div>
+            <div id="show-all-container" class="text-center hidden py-5">
+                <button id="show-all" onclick="handleShowAll()" class="bg-blue-300 p-2 rounded text-white >Show All">Show All</button>
+            </div>
+
+        
+            <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box text-center">
+    <h3 id="show-detail-phone-name" class="font-bold text-lg">Hello!</h3>
+    <div id="show-detail-container">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/phone.js"></script>
+</body>
+</html>
